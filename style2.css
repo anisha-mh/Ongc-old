@@ -1,0 +1,143 @@
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: -120px;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo
+{
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a
+{
+    font-size: 18px;
+    color: #000;
+    left: -180;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1px;
+    margin-right: 50px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active
+{
+    color: #c40094;
+}
+
+body
+{
+    background: #e4e9f7;
+}
+
+.main
+{
+    min-height: 100vh;
+    background: url('bckg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active
+{
+    fill: blur(15px);
+    pointer-events: none;
+}
+
+.home
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content
+{
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-content h1
+{
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.home-content .start-btn
+{
+    width: 190px;
+    height: 55px;
+    background: #716e6d;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #c40094;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home-content .start-btn:hover
+{
+    background: #09001d;
+    box-shadow: none;
+}
+
+.popup-info
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-info.active
+{
+     opacity: 1;
+     pointer-events: auto;
+     transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-info h2
+{
+    font-size: 50px;
+    color: #c40094;
+}
+
+.popup-info .info
+{
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 4px 0;
+}
